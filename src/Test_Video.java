@@ -9,6 +9,7 @@ public class Test_Video extends PApplet {
 	public void setup() {
 		myMovie = new Movie(this, "test.mov");
 		myMovie.loop();
+		//myMovie.play();
 //		myMovie = new Movie(this, "test.mov");
 //		myMovie.loop();
 //		if (myMovie.time() > 0) {
