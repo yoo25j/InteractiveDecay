@@ -16,7 +16,7 @@ public class Butterfly_Jane extends PApplet {
 	
 
 	public void settings() {
-		  size(1024,764, P3D);
+		  size(800, 800, P3D);
 		}
 	
 	public void setup() {
@@ -31,15 +31,15 @@ public class Butterfly_Jane extends PApplet {
 	  for ( int i = 0; i < butterfly_img.width;i++) {
 	    // Begin loop for rows
 	    for ( int j = 0; j < butterfly_img.height;j++) {
-	      int x = width * i/butterfly_img.width; // x position
-	      int y = height * j/butterfly_img.height; // y position
+	      float x = width * i/butterfly_img.width; // x position
+	      float y = height * j/butterfly_img.height; // y position
 	      int loc = i + j*butterfly_img.width;           // Pixel array location
 	      int c = butterfly_img.pixels[loc];       // Grab the color
 	      // Calculate a z position as a function of mouseX and pixel brightness
 	      float z = (float) ((mouseX/(float)width) * brightness(butterfly_img.pixels[loc]) - 100.0);
 	      // Translate to the location, set fill and stroke, and draw the rect
 	      pushMatrix();
-	      translate(x,y,z);
+	      translate(x,y,z + mouseY);
 	      fill(c);
 	      noStroke();
 	      rectMode(CENTER);
