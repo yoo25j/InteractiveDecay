@@ -10,7 +10,7 @@ public class Butterfly extends PApplet {
 		}
 	public void setup() {
  
-	  img  = loadImage("LargeButterfly.jpg"); // Load the image
+	  img  = loadImage(""); // Load the image
 	}
 
 	public void draw() {
