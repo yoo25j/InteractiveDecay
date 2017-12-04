@@ -8,5 +8,6 @@
 	<classpathentry kind="lib" path="gluegen-rt.jar"/>
 	<classpathentry kind="lib" path="jogl-all-natives-macosx-universal.jar"/>
 	<classpathentry kind="lib" path="jogl-all.jar"/>
+	<classpathentry kind="lib" path="GifAnimation.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
