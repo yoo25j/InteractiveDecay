@@ -16,7 +16,9 @@ public class Butterfly_Jane extends PApplet {
 	
 
 	public void settings() {
-		size(1024,764, P3D);
+		//size(1024,764, P3D);
+		size(600,600, P3D);
+		
 	}
 	
 	public void setup() {
