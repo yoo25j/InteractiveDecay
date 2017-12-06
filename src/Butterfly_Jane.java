@@ -16,15 +16,8 @@ public class Butterfly_Jane extends PApplet {
 	
 
 	public void settings() {
-<<<<<<< HEAD
 		  size(800, 800, P3D);
 		}
-=======
-		//size(1024,764, P3D);
-		size(600,600, P3D);
-		
-	}
->>>>>>> 0664ce9fa593df8bcbbbccd3726d4832e07c2551
 	
 	public void setup() {
 		butterfly_img  = loadImage("butterfly.gif"); // Load the image
