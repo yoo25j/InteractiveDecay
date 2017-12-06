@@ -17,17 +17,14 @@ public class Butterfly_Jane extends PApplet {
 	KinectBodyDataProvider kinectReader;
 
 	public void settings() {
-<<<<<<< HEAD
+
 
 		//size(1024,764, P3D);
 		size(1000,1000, P3D);
 		
 	}
 
-=======
-		  size(800, 800, P3D);
-		}
->>>>>>> e5b8cef51a517d693a418b020ea3e59e426d6e90
+
 	
 	public void setup() {
 		butterfly_img  = loadImage("butterfly.gif"); // Load the image
@@ -42,20 +39,9 @@ public class Butterfly_Jane extends PApplet {
 
 		Body person = bodyData.getPerson(0);	
 		
-		if(person != null){
-			PVector head = person.getJoint(Body.HEAD);
-			PVector spine = person.getJoint(Body.SPINE_SHOULDER);
-			PVector spineBase = person.getJoint(Body.SPINE_BASE);
-			PVector shoulderLeft = person.getJoint(Body.SHOULDER_LEFT);
-			PVector shoulderRight = person.getJoint(Body.SHOULDER_RIGHT);
-			PVector footLeft = person.getJoint(Body.FOOT_LEFT);
-			PVector footRight = person.getJoint(Body.FOOT_RIGHT);
-			PVector handLeft = person.getJoint(Body.HAND_LEFT);
-			PVector handRight = person.getJoint(Body.HAND_RIGHT);
-		
-		
-	  background(0);
-	  loadPixels();
+		background(0);
+		loadPixels();
+	
 	  // Begin loop for columns 
 	  for ( int i = 0; i < butterfly_img.width;i++) {
 	    // Begin loop for rows
@@ -64,11 +50,16 @@ public class Butterfly_Jane extends PApplet {
 	      float y = height * j/butterfly_img.height; // y position
 	      int loc = i + j*butterfly_img.width;           // Pixel array location
 	      int c = butterfly_img.pixels[loc];       // Grab the color
+	      
+//	      if(person != null){
+//				PVector handLeft = person.getJoint(Body.HAND_LEFT);
+//				PVector handRight = person.getJoint(Body.HAND_RIGHT);
+	      
 	      // Calculate a z position as a function of mouseX and pixel brightness
-	      float z = (float) ((handRight.x/(float)width) * brightness(butterfly_img.pixels[loc]) - 100.0);
+	      float z = (float) ((mouseX/(float)width) * brightness(butterfly_img.pixels[loc]) - 100.0);
 	      // Translate to the location, set fill and stroke, and draw the rect
 	      pushMatrix();
-	      translate(x,y,z + handLeft.y );
+	      translate(x,y,z + mouseY );
 	      fill(c);
 	      noStroke();
 	      rectMode(CENTER);
@@ -77,7 +68,7 @@ public class Butterfly_Jane extends PApplet {
 	    }
 	  }
 		}
-	}
+//	}
 	public static void main(String[] args) {
 		PApplet.main(Butterfly_Jane.class.getName());
 

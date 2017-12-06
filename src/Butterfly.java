@@ -15,13 +15,10 @@ public class Butterfly extends PApplet {
 		}
 	
 	public void setup() {
-<<<<<<< HEAD
 
 	  butterfly_img  = loadImage("butterfly.gif"); // Load the image
 
-=======
- 	  butterfly_img  = loadImage("butterfly.gif"); // Load the image
->>>>>>> e5b8cef51a517d693a418b020ea3e59e426d6e90
+
 	}
 
 	public void draw() {
@@ -39,7 +36,7 @@ public class Butterfly extends PApplet {
 	      float z = (float) ((mouseX/(float)width) * brightness(butterfly_img.pixels[loc]) - 100.0);
 	      // Translate to the location, set fill and stroke, and draw the rect
 	      pushMatrix();
-	      translate(x,y,z);
+	      translate(x,y,z +mouseY);
 	      fill(c);
 	      noStroke();
 	      rectMode(CENTER);
