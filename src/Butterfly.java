@@ -15,9 +15,13 @@ public class Butterfly extends PApplet {
 		}
 	
 	public void setup() {
+<<<<<<< HEAD
 
 	  butterfly_img  = loadImage("butterfly.gif"); // Load the image
 
+=======
+ 	  butterfly_img  = loadImage("butterfly.gif"); // Load the image
+>>>>>>> e5b8cef51a517d693a418b020ea3e59e426d6e90
 	}
 
 	public void draw() {

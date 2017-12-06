@@ -17,12 +17,17 @@ public class Butterfly_Jane extends PApplet {
 	KinectBodyDataProvider kinectReader;
 
 	public void settings() {
+<<<<<<< HEAD
 
 		//size(1024,764, P3D);
 		size(1000,1000, P3D);
 		
 	}
 
+=======
+		  size(800, 800, P3D);
+		}
+>>>>>>> e5b8cef51a517d693a418b020ea3e59e426d6e90
 	
 	public void setup() {
 		butterfly_img  = loadImage("butterfly.gif"); // Load the image
