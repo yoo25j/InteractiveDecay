@@ -4,11 +4,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/video"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/processing"/>
-	<classpathentry kind="lib" path="/Users/NikkoleSpencer/Documents/Processing/libraries/library/core.jar"/>
-	<classpathentry kind="lib" path="/Users/NikkoleSpencer/Documents/Processing/libraries/library/gluegen-rt-natives-macosx-universal.jar"/>
-	<classpathentry kind="lib" path="/Users/NikkoleSpencer/Documents/Processing/libraries/library/gluegen-rt.jar"/>
-	<classpathentry kind="lib" path="/Users/NikkoleSpencer/Documents/Processing/libraries/library/jogl-all-natives-macosx-universal.jar"/>
-	<classpathentry kind="lib" path="/Users/NikkoleSpencer/Documents/Processing/libraries/library/jogl-all.jar"/>
 	<classpathentry kind="lib" path="core.jar"/>
 	<classpathentry kind="lib" path="gluegen-rt-natives-macosx-universal.jar"/>
 	<classpathentry kind="lib" path="gluegen-rt.jar"/>

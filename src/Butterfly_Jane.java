@@ -1,3 +1,4 @@
+
 import processing.core.PApplet; 
 import processing.core.PImage;
 import processing.core.PVector;
@@ -32,13 +33,11 @@ public class Butterfly_Jane extends PApplet {
 		}		
 	}
 	public void settings() {
+
+
 		//size(1024,764, P3D);
-<<<<<<< HEAD
-		size(1000,1000, P3D);
-=======
 		createWindow(true, true, .5f);
 		
->>>>>>> 044321e3a56ab2e771b2f5353369d01bfa9beb32
 	}
 
 
@@ -62,7 +61,7 @@ public class Butterfly_Jane extends PApplet {
 	    	  
 				PVector handLeft = person.getJoint(Body.HAND_LEFT);
 				PVector handRight = person.getJoint(Body.HAND_RIGHT);
-			if(handRight !=null && handLeft!= null){
+	if(handRight !=null && handLeft!= null){
 				rep_X = handRight.x * 1000; 
 				rep_Y = handLeft.y * 750; 
 	     
