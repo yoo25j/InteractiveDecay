@@ -17,12 +17,26 @@ public class Butterfly_Jane extends PApplet {
 	KinectBodyDataProvider kinectReader;
 	float rep_X; 
 	float rep_Y;
-
+	public void createWindow(boolean useP2D, boolean isFullscreen, float windowsScale) {
+		if (useP2D) {
+			if(isFullscreen) {
+				fullScreen(P3D);  			
+			} else {
+				size((int)(1920 * windowsScale), (int)(1080 * windowsScale), P3D);
+			}
+		} else {
+			if(isFullscreen) {
+				fullScreen();  			
+			} else {
+				size((int)(1920 * windowsScale), (int)(1080 * windowsScale));
+			}
+		}		
+	}
 	public void settings() {
 
 
 		//size(1024,764, P3D);
-		size(1000,1000, P3D);
+		createWindow(true, true, .5f);
 		
 	}
 
@@ -49,7 +63,7 @@ public class Butterfly_Jane extends PApplet {
 				PVector handRight = person.getJoint(Body.HAND_RIGHT);
 	if(handRight !=null && handLeft!= null){
 				rep_X = handRight.x * 1000; 
-				rep_Y = handLeft.y * 1000; 
+				rep_Y = handLeft.y * 750; 
 	     
 	}
 	      }
