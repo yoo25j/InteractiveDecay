@@ -65,25 +65,33 @@ public class Butterfly_Jane_GifTest extends PApplet {
 				rep_X = handRight.x * 1000; 
 				rep_Y = handLeft.y * 750; 
 			}
+			
+			if (handLeft != null) {
+				frame++;
+				//butterfly_frames[frame];
+			}
+			
 	    }
+	    
+	    
 	     
-	    for ( int i = 0; i < butterfly_img.width;i++) { // Begin loop for columns
-		    for ( int j = 0; j < butterfly_img.height;j++) { // Begin loop for rows
-		    		float x = width * i/butterfly_img.width; 	// x position
-		    		float y = height * j/butterfly_img.height; 	// y position
-			    int loc = i + j*butterfly_img.width;       	// Pixel array location
-			    int c = butterfly_img.pixels[loc];       	// Grab the color
-			    float z = (float) ((rep_X/(float)width) * brightness(butterfly_img.pixels[loc]) - 100.0);	// Calculate a z position as a function of mouseX and pixel brightness
-			    // Translate to the location, set fill and stroke, and draw the rect
-			    pushMatrix();
-			    translate(x,y,z + rep_Y  );
-			    fill(c);
-			    noStroke();
-			    rectMode(CENTER);
-			    rect(0,0,width/butterfly_img.width,height/butterfly_img.height);
-			    popMatrix();
-		    }
-	    }
+//	    for ( int i = 0; i < butterfly_img.width;i++) { // Begin loop for columns
+//		    for ( int j = 0; j < butterfly_img.height;j++) { // Begin loop for rows
+//		    		float x = width * i/butterfly_img.width; 	// x position
+//		    		float y = height * j/butterfly_img.height; 	// y position
+//			    int loc = i + j*butterfly_img.width;       	// Pixel array location
+//			    int c = butterfly_img.pixels[loc];       	// Grab the color
+//			    float z = (float) ((rep_X/(float)width) * brightness(butterfly_img.pixels[loc]) - 100.0);	// Calculate a z position as a function of mouseX and pixel brightness
+//			    // Translate to the location, set fill and stroke, and draw the rect
+//			    pushMatrix();
+//			    translate(x,y,z + rep_Y  );
+//			    fill(c);
+//			    noStroke();
+//			    rectMode(CENTER);
+//			    rect(0,0,width/butterfly_img.width,height/butterfly_img.height);
+//			    popMatrix();
+//		    }
+//	    }
 	}
 
 	public static void main(String[] args) {
