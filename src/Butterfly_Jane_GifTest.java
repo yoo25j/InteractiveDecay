@@ -14,7 +14,7 @@ public class Butterfly_Jane_GifTest extends PApplet {
 	int frame = 0; // current frame index 
 	boolean last_frame = false; 
 	PImage [] butterfly_frames; //holds each frame of gif
-	PImage butterfly_img;       // The source image
+	//PImage butterfly_img;       // The source image
 	
 	KinectBodyDataProvider kinectReader;
 	float rep_X; 
@@ -60,20 +60,15 @@ public class Butterfly_Jane_GifTest extends PApplet {
 	    if(person != null){
 			PVector handLeft = person.getJoint(Body.HAND_LEFT);
 			PVector handRight = person.getJoint(Body.HAND_RIGHT);
-			
 			if(handRight !=null && handLeft!= null){
 				rep_X = handRight.x * 1000; 
 				rep_Y = handLeft.y * 750; 
 			}
-			
 			if (handLeft != null) {
 				frame++;
 				//butterfly_frames[frame];
 			}
-			
 	    }
-	    
-	    
 	     
 //	    for ( int i = 0; i < butterfly_img.width;i++) { // Begin loop for columns
 //		    for ( int j = 0; j < butterfly_img.height;j++) { // Begin loop for rows
@@ -92,6 +87,14 @@ public class Butterfly_Jane_GifTest extends PApplet {
 //			    popMatrix();
 //		    }
 //	    }
+	    if (frame == NUM_FRAMES) {
+	    		last_frame= true;
+	    }
+	    else if (frame > 0 && last_frame) {
+	    		if (frame == 0) {
+	    			last_frame = false;
+	    		}
+	    }
 	}
 
 	public static void main(String[] args) {
