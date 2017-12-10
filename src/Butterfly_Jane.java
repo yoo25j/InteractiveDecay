@@ -1,11 +1,16 @@
 
-import processing.core.PApplet; 
+import processing.core.PApplet;
+ 
 import processing.core.PImage;
 import processing.core.PVector;
 import java.io.IOException;
 import java.util.ArrayList;
+import javax.sound.*;
+
+
 
 import processing.core.*;
+
 
 import ddf.minim.*;
 
@@ -16,9 +21,13 @@ public class Butterfly_Jane extends PApplet {
 	PImage butterfly_img;       // The source image
 	boolean last_frame = false;
 	
+	
 	KinectBodyDataProvider kinectReader;
 	float rep_X; 
 	float rep_Y;
+	
+	
+	
 	public void createWindow(boolean useP2D, boolean isFullscreen, float windowsScale) {
 		if (useP2D) {
 			if(isFullscreen) {
@@ -48,6 +57,9 @@ public class Butterfly_Jane extends PApplet {
 		butterfly_img  = loadImage("butterfly.gif"); // Load the image
 	  //loadImage("butterfly.gif"); // Load the image
 		
+	
+		 
+	    
 		kinectReader = new KinectBodyDataProvider(8008);
 		kinectReader.start();
 	}
@@ -67,6 +79,8 @@ public class Butterfly_Jane extends PApplet {
 				rep_Y = handLeft.y * 750; 
 	}
 	      }
+	  if( person!= null){
+		
 	  // Begin loop for columns 
 	  for ( int i = 0; i < butterfly_img.width;i++) {
 	    // Begin loop for rows
@@ -79,7 +93,7 @@ public class Butterfly_Jane extends PApplet {
 
 	      
 	      // Calculate a z position as a function of mouseX and pixel brightness
-	      float z = (float) ((rep_X/(float)width) * brightness(butterfly_img.pixels[loc]) - 100.0);
+	      float z = (float) ((rep_X*10/(float)width) * brightness(butterfly_img.pixels[loc]) - 100.0);
 	      // Translate to the location, set fill and stroke, and draw the rect
 	      pushMatrix();
 	      translate(x,y,z + rep_Y  );
@@ -92,7 +106,7 @@ public class Butterfly_Jane extends PApplet {
 	  }
 	      }
 	      
-
+	}
 	public static void main(String[] args) {
 		PApplet.main(Butterfly_Jane.class.getName());
 
