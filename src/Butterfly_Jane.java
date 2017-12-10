@@ -7,6 +7,8 @@ import java.util.ArrayList;
 
 import processing.core.*;
 
+import ddf.minim.*;
+
 public class Butterfly_Jane extends PApplet {
 	
 	final static int NUM_FRAMES = 27; // number of frames
