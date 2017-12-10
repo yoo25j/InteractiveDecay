@@ -59,14 +59,12 @@ public class Butterfly_Jane extends PApplet {
 		
 		background(0);
 		loadPixels();
-	      if(person != null){
-	    	  
+	      if(person != null){	  
 				PVector handLeft = person.getJoint(Body.HAND_LEFT);
 				PVector handRight = person.getJoint(Body.HAND_RIGHT);
-	if(handRight !=null && handLeft!= null){
+			if(handRight !=null && handLeft!= null){
 				rep_X = handRight.x * 1000; 
 				rep_Y = handLeft.y * 750; 
-	     
 	}
 	      }
 	  // Begin loop for columns 
