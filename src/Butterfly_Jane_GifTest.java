@@ -45,7 +45,14 @@ public class Butterfly_Jane_GifTest extends PApplet {
 	public void setup() {
 		//butterfly_img  = loadImage("butterfly.gif"); // Load the image
 		//loadImage("butterfly.gif"); // Load the image
-		butterfly_frames = Gif.getPImages(this, "butterfly.gif"); //array of frames
+		//butterfly_frames = Gif.getPImages(this, "butterfly.gif"); //array of frames
+		
+  for(int i= 1; i <= 27; i++){
+	  butterfly_frames= new PImage [27];
+	   butterfly_frames[i] =loadImage("butterfly" +i +".gif");
+			
+			
+		}
 		
 		kinectReader = new KinectBodyDataProvider(8008);
 		kinectReader.start();
@@ -55,7 +62,13 @@ public class Butterfly_Jane_GifTest extends PApplet {
 		KinectBodyData bodyData = kinectReader.getMostRecentData();
 		Body person = bodyData.getPerson(0);	
 		background(0);
-		loadPixels();
+		
+		for(int i= 1; i <= 27; i++){
+			butterfly_frames[i].loadPixels();
+			
+		}
+		
+		
 		
 	    if(person != null){
 			PVector handLeft = person.getJoint(Body.HAND_LEFT);
